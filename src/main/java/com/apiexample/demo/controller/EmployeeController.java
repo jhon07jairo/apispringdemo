@@ -14,13 +14,13 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://app77employees77.netlify.app")
     @GetMapping("/employees")
     public EmployeeResponse findAll(){
         return this.employeeService.findAll();
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://app77employees77.netlify.app")
     @GetMapping("/employee/{id}")
     public EmployeeIdResponse findById(@PathVariable("id") Integer id) {
         return this.employeeService.findById(id);
